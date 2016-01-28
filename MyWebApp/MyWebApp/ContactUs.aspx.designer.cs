@@ -10,7 +10,7 @@
 namespace MyWebApp {
     
     
-    public partial class WebForm1 {
+    public partial class ContactUs {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,12 @@ namespace MyWebApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lab1 control.
+        /// linkContactUs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lab1;
-        
-        /// <summary>
-        /// Calendar1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.LinkButton linkContactUs;
     }
 }
