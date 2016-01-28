@@ -7,13 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace MyWebApp
 {
-    public partial class ContactUs : System.Web.UI.Page
+    public partial class WelcomePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-       
     }
 }
