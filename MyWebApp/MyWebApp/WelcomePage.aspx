@@ -21,7 +21,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Pass Word:</asp:TableCell>
-                <asp:TableCell><asp:TextBox runat="server" ID="txtPassWord"></asp:TextBox></asp:TableCell>
+                <asp:TableCell><asp:TextBox runat="server" ID="txtPassWord" ></asp:TextBox></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Confirm Password:</asp:TableCell>
@@ -33,10 +33,10 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Passport No.</asp:TableCell>
-                <asp:TableCell><asp:TextBox runat="server" ID="txtPassNo"></asp:TextBox></asp:TableCell>
+                <asp:TableCell><asp:TextBox runat="server" ID="txtPassNo" ></asp:TextBox></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow >
-                <asp:TableCell>Gender:<asp:RadioButtonList runat="server"></asp:RadioButtonList>  </asp:TableCell>
+                <asp:TableCell>Gender:<asp:RadioButtonList runat="server" ></asp:RadioButtonList>  </asp:TableCell>
                 <asp:TableCell Width="200">
                     <asp:RadioButtonList ID="rdblGender" runat="server">
                         <asp:ListItem Text="Male" Value="1" Selected="True"></asp:ListItem>
@@ -46,20 +46,33 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Date Of Birth:</asp:TableCell>
-                <asp:TableCell runat="server" >
+                <asp:TableCell runat="server"  >
                     <asp:TextBox runat="server" ID="txtDOB"></asp:TextBox>
                     <asp:ImageButton runat="server" ImageUrl="~/Image/images.jpg"  Height="20" Width="20" ID="ImageButton1" OnClick="ibtnCalender_Click" />
                 </asp:TableCell>
                 <asp:TableCell><asp:Calendar runat="server" ID="calDOB" OnSelectionChanged="calDOB_SelectionChanged" ></asp:Calendar></asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:CheckBoxList runat="server" ID="cblInterest" OnSelectedIndexChanged="cblInterest_SelectedIndexChanged">
+                        <asp:ListItem>BasketBall</asp:ListItem>
+                        <asp:ListItem>FootBall</asp:ListItem>
+                    </asp:CheckBoxList>
+                </asp:TableCell>
+            </asp:TableRow>
             <asp:TableRow >
                 <asp:TableCell>Country</asp:TableCell>
-                <asp:TableCell><asp:DropDownList runat="server" ID="dlCountry" ></asp:DropDownList></asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList runat="server" ID="dlCountry" >
+                        <asp:ListItem>China</asp:ListItem>
+                        <asp:ListItem>Malysia</asp:ListItem>
+                    </asp:DropDownList>
+                </asp:TableCell>
             </asp:TableRow>
             </asp:Table>
-        <asp:Button runat="server" ID="btnSubmit" Text="Submit"/>
-        
-        <asp:CheckBoxList runat="server"></asp:CheckBoxList>
+        <asp:Button runat="server" ID="btnSubmit" Text="Submit" OnClick="btnSubmit_Click"/>
+
+
     </div>
     </form>
 </body>

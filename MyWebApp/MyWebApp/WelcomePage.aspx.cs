@@ -12,6 +12,8 @@ namespace MyWebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             calDOB.Visible = false;
+            
+            
         }
 
 
@@ -25,5 +27,16 @@ namespace MyWebApp
             txtDOB.Text = calDOB.SelectedDate.ToShortDateString();
             calDOB.Visible = false;
         }
+
+        protected void cblInterest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/advancePage");
+        }
+
     }
 }
