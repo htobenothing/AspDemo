@@ -11,7 +11,19 @@ namespace MyWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            calDOB.Visible = false;
+        }
 
+
+        protected void ibtnCalender_Click(object sender, ImageClickEventArgs e)
+        {
+            calDOB.Visible = true;
+        }
+
+        protected void calDOB_SelectionChanged(object sender, EventArgs e)
+        {
+            txtDOB.Text = calDOB.SelectedDate.ToShortDateString();
+            calDOB.Visible = false;
         }
     }
 }
