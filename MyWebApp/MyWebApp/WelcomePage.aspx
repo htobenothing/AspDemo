@@ -18,6 +18,7 @@
             <asp:TableRow>
                 <asp:TableCell>Login Name:</asp:TableCell>
                 <asp:TableCell><asp:TextBox runat="server" ID="txtName"></asp:TextBox></asp:TableCell>
+                <asp:TableCell><asp:RequiredFieldValidator runat="server" ControlToValidate="txtName"></asp:RequiredFieldValidator></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Pass Word:</asp:TableCell>
@@ -70,7 +71,7 @@
                 </asp:TableCell>
             </asp:TableRow>
             </asp:Table>
-        <asp:Button runat="server" ID="btnSubmit" Text="Submit" OnClick="btnSubmit_Click"/>
+        <asp:Button runat="server" ID="btnSubmit" Text="Submit"/>
 
 
     </div>
