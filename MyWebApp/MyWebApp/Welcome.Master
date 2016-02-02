@@ -1,5 +1,4 @@
-﻿
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Welcome.master.cs" Inherits="MyWebApp.Welcome" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Welcome.master.cs" Inherits="MyWebApp.Welcome" %>
 
 <!DOCTYPE html>
 
@@ -8,28 +7,47 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="MainPage.css" type="text/css" rel="stylesheet"/>
+    <link href="MainPage.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <div id="divHeader">
-
     </div>
-    <div id="divMiddle">
-        <div id="divNav">
+    <div id="divNav">
+        <div id="divadjNav">
             <ul id="ulMenu">
-                <li><a href="#">Home</a></li>
+                <li><a href="Home.aspx">Home</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="ContactUs.aspx">Contact</a></li>
             </ul>
         </div>
-        <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-            </asp:ContentPlaceHolder>
-        </div>
-        </form>
     </div>
-    <div id="divFooter"></div>
+    <div id="divMiddle">
+
+        <div id="divContent">
+            <form id="form1" runat="server">
+                <div id="divselect" style="float:left">
+                    <asp:TreeView runat="server" ID="treSelect" DataSourceID="XmlDataSource1" ImageSet="Arrows">
+                        <DataBindings>
+                            <asp:TreeNodeBinding DataMember="subMenu" TextField="text" />
+                            <asp:TreeNodeBinding DataMember="Menu" TextField="text" />
+                        </DataBindings>
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/XMLFile1.xml"></asp:XmlDataSource>
+                </div>
+                <div style="float:left">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div id="divFooter" >
+        <p>@Copy Right Albert</p>
+    </div>
 </body>
 </html>

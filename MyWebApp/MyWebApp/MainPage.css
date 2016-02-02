@@ -4,14 +4,24 @@
 
 
 #divHeader {
-    width: 1360px;
+    width: 1000px;
     margin: 0 auto;
 }
 
 #divNav {
-    width:1360px;
-    margin:0 auto;
+    background-color:black;
     overflow:auto;
+}
+#divadjNav{
+    width:1000px;
+    margin:0 auto;
+}
+
+#divFooter{
+    height:80px;
+    color:white;
+    background-color:black;
+    
 }
 
 #ulMenu {
@@ -27,8 +37,7 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 10px 10px 0 0;
-            box-shadow: 0 1px 3px rgba(0,0,)
+
         }
 
         #ulMenu li a:hover {

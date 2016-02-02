@@ -1,5 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Home>
-  
-  
-</Home>
+<home text="全部分类">
+  <Menu text="家用电器" url="#">
+    <subMenu text="大家电"></subMenu>
+    <subMenu text="小家电"></subMenu>
+    <subMenu text="个人护理"></subMenu>
+  </Menu>
+  <Menu text="手机、电脑、京东通信">
+    <subMenu text="手机"></subMenu>
+    <subMenu text="电脑"></subMenu>
+    <subMenu text="京东通讯"></subMenu>
+  </Menu>
+  <Menu text="家居、厨具">
+    <subMenu text="家居"></subMenu>
+    <subMenu text="厨具"></subMenu>
+  </Menu>
+  <Menu text="服装">
+    <subMenu text="男装"></subMenu>
+    <subMenu text="女装"></subMenu>
+  </Menu>
+  <Menu text="图书">
+    <subMenu text="社科"></subMenu>
+    <subMenu text="自然"></subMenu>
+  </Menu>
+</home>
+
